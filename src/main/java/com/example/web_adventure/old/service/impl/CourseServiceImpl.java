@@ -1,16 +1,16 @@
-package com.example.web_adventure.service.impl;
+package com.example.web_adventure.old.service.impl;
 
-import com.example.web_adventure.dto.CourseDTO;
+import com.example.web_adventure.old.dto.CourseDTO;
 import com.example.web_adventure.exception.ResourceNotFoundException;
-import com.example.web_adventure.model.Course;
-import com.example.web_adventure.model.CourseDomain;
-import com.example.web_adventure.model.CourseStatus;
-import com.example.web_adventure.model.Instructor;
-import com.example.web_adventure.repository.CourseDomainRepository;
-import com.example.web_adventure.repository.CourseRepository;
-import com.example.web_adventure.repository.CourseStatusRepository;
-import com.example.web_adventure.repository.InstructorRepository;
-import com.example.web_adventure.service.CourseService;
+import com.example.web_adventure.old.model.Course;
+import com.example.web_adventure.old.model.CourseDomain;
+import com.example.web_adventure.old.model.CourseStatus;
+import com.example.web_adventure.old.model.Instructor;
+import com.example.web_adventure.old.repository.CourseDomainRepository;
+import com.example.web_adventure.old.repository.CourseRepository;
+import com.example.web_adventure.old.repository.CourseStatusRepository;
+import com.example.web_adventure.old.repository.InstructorRepository;
+import com.example.web_adventure.old.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

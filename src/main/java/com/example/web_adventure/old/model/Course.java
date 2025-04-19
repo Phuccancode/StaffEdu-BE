@@ -1,4 +1,4 @@
-package com.example.web_adventure.model;
+package com.example.web_adventure.old.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

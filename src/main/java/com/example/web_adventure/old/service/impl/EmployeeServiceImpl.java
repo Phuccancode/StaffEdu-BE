@@ -1,14 +1,14 @@
-package com.example.web_adventure.service.impl;
+package com.example.web_adventure.old.service.impl;
 
-import com.example.web_adventure.dto.EmployeeDTO;
+import com.example.web_adventure.old.dto.EmployeeDTO;
 import com.example.web_adventure.exception.ResourceNotFoundException;
-import com.example.web_adventure.model.Department;
-import com.example.web_adventure.model.Employee;
-import com.example.web_adventure.model.User;
-import com.example.web_adventure.repository.DepartmentRepository;
-import com.example.web_adventure.repository.EmployeeRepository;
-import com.example.web_adventure.repository.UserRepository;
-import com.example.web_adventure.service.EmployeeService;
+import com.example.web_adventure.old.model.Department;
+import com.example.web_adventure.old.model.Employee;
+import com.example.web_adventure.old.model.User;
+import com.example.web_adventure.old.repository.DepartmentRepository;
+import com.example.web_adventure.old.repository.EmployeeRepository;
+import com.example.web_adventure.old.repository.UserRepository;
+import com.example.web_adventure.old.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

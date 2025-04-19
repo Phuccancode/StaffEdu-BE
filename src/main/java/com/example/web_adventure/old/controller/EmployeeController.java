@@ -1,8 +1,8 @@
-package com.example.web_adventure.controller;
+package com.example.web_adventure.old.controller;
 
-import com.example.web_adventure.dto.EmployeeDTO;
+import com.example.web_adventure.old.dto.EmployeeDTO;
 import com.example.web_adventure.exception.ResourceNotFoundException;
-import com.example.web_adventure.service.EmployeeService;
+import com.example.web_adventure.old.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.example.web_adventure.dto;
+package com.example.web_adventure.old.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

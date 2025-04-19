@@ -1,7 +1,7 @@
-package com.example.web_adventure.repository;
+package com.example.web_adventure.old.repository;
 
-import com.example.web_adventure.model.Role;
-import com.example.web_adventure.model.User;
+import com.example.web_adventure.old.model.Role;
+import com.example.web_adventure.old.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

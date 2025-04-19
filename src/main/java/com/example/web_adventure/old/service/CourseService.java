@@ -1,6 +1,6 @@
-package com.example.web_adventure.service;
+package com.example.web_adventure.old.service;
 
-import com.example.web_adventure.dto.CourseDTO;
+import com.example.web_adventure.old.dto.CourseDTO;
 
 import java.util.List;
 import java.util.Optional;

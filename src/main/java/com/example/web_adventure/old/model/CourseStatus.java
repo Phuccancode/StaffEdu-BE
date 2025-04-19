@@ -1,4 +1,4 @@
-package com.example.web_adventure.model;
+package com.example.web_adventure.old.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,15 +11,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "roles")
-public class Role {
+@Table(name = "course_statuses")
+public class CourseStatus {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "role_id")
+    @Column(name = "status_id")
     private Long id;
     
-    @Column(name = "role_name", nullable = false, unique = true)
+    @Column(name = "status_name", nullable = false)
     private String name;
     
     @Column(name = "description")
@@ -28,17 +28,8 @@ public class Role {
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
     
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
-    
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
-        updatedAt = LocalDateTime.now();
-    }
-    
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
     }
 }

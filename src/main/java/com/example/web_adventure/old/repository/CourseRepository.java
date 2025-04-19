@@ -1,9 +1,9 @@
-package com.example.web_adventure.repository;
+package com.example.web_adventure.old.repository;
 
-import com.example.web_adventure.model.Course;
-import com.example.web_adventure.model.CourseDomain;
-import com.example.web_adventure.model.CourseStatus;
-import com.example.web_adventure.model.Instructor;
+import com.example.web_adventure.old.model.Course;
+import com.example.web_adventure.old.model.CourseDomain;
+import com.example.web_adventure.old.model.CourseStatus;
+import com.example.web_adventure.old.model.Instructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
