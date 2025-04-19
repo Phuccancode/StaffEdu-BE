@@ -32,6 +32,7 @@ CREATE TABLE users (
                        user_id      BIGINT        PRIMARY KEY,
                        username     VARCHAR(50)   NOT NULL UNIQUE,
                        password     VARCHAR(255)  NOT NULL,
+                       avatar varchar(255),
                        email        VARCHAR(100)  NOT NULL UNIQUE,
                        role_id      BIGINT        NOT NULL,
                        is_active    BOOLEAN       NOT NULL DEFAULT TRUE,
@@ -520,10 +521,10 @@ CREATE TABLE roadmap_area_courses (
                                       roadmap_id        BIGINT      NOT NULL,
                                       area_id           BIGINT      NOT NULL,
                                       course_id         BIGINT      NOT NULL,
+                                      enrollment_id     BIGINT      NOT NULL,
                                       selected_date     TIMESTAMPTZ NOT NULL DEFAULT now(),
                                       allocated_hours   INTEGER     NOT NULL DEFAULT 0,
                                       recommended_order INTEGER,
-                                      prerequisites     TEXT,
                                       status            enrollment_status_enum NOT NULL DEFAULT 'registered',
                                       progress_percent  SMALLINT    NOT NULL DEFAULT 0,
                                       actual_start_date DATE,
@@ -1030,6 +1031,12 @@ ALTER TABLE roadmap_area_courses
     ADD CONSTRAINT fk_roadmap_area_courses_updated_by
         FOREIGN KEY (updated_by) REFERENCES users(user_id) ON DELETE SET NULL;
 CREATE INDEX idx_roadmap_area_courses_updated_by ON roadmap_area_courses(updated_by);
+
+-- roadmap_area_courses.enrollment_id → enrollments.enrollment_id
+ALTER TABLE roadmap_area_courses
+    ADD CONSTRAINT fk_roadmap_area_courses_enrollment
+        FOREIGN KEY (updated_by) REFERENCES enrollments(enrollment_id) ON DELETE CASCADE;
+CREATE INDEX idx_roadmap_area_courses_enrollment ON roadmap_area_courses(enrollment_id);
 
 -- roadmap_statistics.roadmap_id → user_roadmaps.roadmap_id
 ALTER TABLE roadmap_statistics
