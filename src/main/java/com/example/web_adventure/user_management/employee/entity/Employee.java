@@ -58,6 +58,9 @@ public class Employee {
     @JoinColumn(name = "updated_by")
     private User updatedBy;
 
+    @Column(name = "is_deleted", nullable = false)
+    private boolean deleted;
+
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -65,8 +68,5 @@ public class Employee {
     @UpdateTimestamp
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
-
-    @Column(name = "is_deleted", nullable = false)
-    private boolean isDeleted;
 }
 

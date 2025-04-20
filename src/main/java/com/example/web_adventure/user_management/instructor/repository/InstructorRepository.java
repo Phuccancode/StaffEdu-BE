@@ -1,6 +1,6 @@
 package com.example.web_adventure.user_management.instructor.repository;
 
-import com.example.web_adventure.old.model.Instructor;
+import com.example.web_adventure.user_management.instructor.entity.Instructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

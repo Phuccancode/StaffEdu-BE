@@ -17,7 +17,5 @@ public interface EmployeeService {
     
     boolean deleteEmployee(Long id);
     
-    List<EmployeeDTO> searchEmployees(String keyword);
-    
     List<EmployeeDTO> getEmployeesByDepartment(Long departmentId);
 }

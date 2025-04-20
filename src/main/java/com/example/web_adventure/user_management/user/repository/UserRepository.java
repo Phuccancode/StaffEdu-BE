@@ -1,7 +1,7 @@
 package com.example.web_adventure.user_management.user.repository;
 
-import com.example.web_adventure.old.model.Role;
-import com.example.web_adventure.old.model.User;
+import com.example.web_adventure.user_management.role.entity.Role;
+import com.example.web_adventure.user_management.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

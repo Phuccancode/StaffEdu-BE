@@ -56,12 +56,6 @@ public class EmployeeController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/search")
-    public ResponseEntity<List<EmployeeDTO>> searchEmployees(@RequestParam String keyword) {
-        List<EmployeeDTO> employees = employeeService.searchEmployees(keyword);
-        return ResponseEntity.ok(employees);
-    }
-
     @GetMapping("/department/{departmentId}")
     public ResponseEntity<List<EmployeeDTO>> getEmployeesByDepartment(@PathVariable Long departmentId) {
         List<EmployeeDTO> employees = employeeService.getEmployeesByDepartment(departmentId);

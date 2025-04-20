@@ -1,5 +1,7 @@
 package com.example.web_adventure.user_management.department.entity;
 
+import com.example.web_adventure.user_management.employee.entity.Employee;
+import com.example.web_adventure.user_management.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
