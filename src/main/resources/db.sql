@@ -3,10 +3,7 @@
 -- ==============================
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
 
-CREATE TYPE role_name_enum             AS ENUM ('admin','manager','employee');
 CREATE TYPE employee_status_enum       AS ENUM ('active','inactive','on_leave');
-CREATE TYPE course_level_enum          AS ENUM ('beginner','intermediate','advanced');
-CREATE TYPE course_type_enum           AS ENUM ('self_paced','instructor_led','blended');
 CREATE TYPE enrollment_status_enum     AS ENUM ('registered','in_progress','completed','dropped');
 CREATE TYPE progress_status_enum       AS ENUM ('not_started','in_progress','completed');
 CREATE TYPE assignment_type_enum       AS ENUM ('file','text','link','mixed');
@@ -22,7 +19,7 @@ CREATE TYPE roadmap_area_status_enum   AS ENUM ('pending','in_progress','complet
 -- ==============================
 CREATE TABLE roles (
                        role_id     BIGINT        PRIMARY KEY,
-                       role_name   role_name_enum NOT NULL UNIQUE,
+                       role_name   VARCHAR(255)  NOT NULL,
                        description TEXT,
                        created_at  TIMESTAMPTZ   NOT NULL DEFAULT now(),
                        updated_at  TIMESTAMPTZ   NOT NULL DEFAULT now()
@@ -138,9 +135,7 @@ CREATE TABLE courses (
                          title                 VARCHAR(255) NOT NULL,
                          description           TEXT,
                          content_description   TEXT,
-                         level                 course_level_enum NOT NULL DEFAULT 'beginner',
                          language              VARCHAR(10) NOT NULL DEFAULT 'en',
-                         course_type           course_type_enum NOT NULL DEFAULT 'self_paced',
                          start_date            DATE,
                          end_date              DATE,
                          enrollment_start      TIMESTAMPTZ,
